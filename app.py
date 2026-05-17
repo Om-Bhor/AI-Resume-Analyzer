@@ -10,7 +10,7 @@ from PIL import Image
 import pdf2image
 import google.generativeai as genai
 
-geni.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def get_gemini_response(input,pdf_content,prompt):
     model = genai.GenerativeModel('gemini-pro-vision')
